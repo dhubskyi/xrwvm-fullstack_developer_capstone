@@ -31,6 +31,6 @@ class CarModel(models.Model):
             MinValueValidator(2015)
         ]
     )
-    
+
     def __str__(self):
         return "Car model "+self.name
