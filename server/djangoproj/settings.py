@@ -29,12 +29,15 @@ SECRET_KEY =\
 DEBUG = True
 
 ALLOWED_HOSTS = ["https://localhost",
-"hubskyydenys-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
-"0.0.0.0"]
+    "hubskyydenys-8000.theiadockernext-1-"+
+        "labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
+    "0.0.0.0"]
 CSRF_TRUSTED_ORIGINS = ["https://localhost",
-"hubskyydenys-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
-"0.0.0.0",
-"https://hubskyydenys-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/admin"]
+    "hubskyydenys-8000.theiadockernext-1-"+
+        "labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
+    "0.0.0.0",
+    "https://hubskyydenys-8000.theiadockernext-1-"+
+        "labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/admin"]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
@@ -156,9 +159,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost',
 "https://localhost:8000",
-"https://hubskyydenys-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai"]
+"https://hubskyydenys-8000.theiadockernext-1-"+
+    "labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai"]
 CSRF_TRUSTED_ORIGINS = ["https://localhost:8000",
-"https://hubskyydenys-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai"]
+"https://hubskyydenys-8000.theiadockernext-1-"+
+    "labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai"]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
@@ -191,7 +196,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,'frontend/static'),
+            os.path.join(BASE_DIR, 'frontend/static'),
             os.path.join(BASE_DIR, 'frontend/build'),
             os.path.join(BASE_DIR, 'frontend/build/static'),
         ],
