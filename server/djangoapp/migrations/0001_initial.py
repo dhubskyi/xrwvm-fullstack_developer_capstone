@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
             name='CarModel',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True,
-                    serialize=False, verbose_name='ID')),
+                serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=255)),
                 ('type', models.CharField(choices=[
                     ('SEDAN', 'Sedan'), ('SUV', 'SUV'),
