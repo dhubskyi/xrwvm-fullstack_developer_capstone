@@ -7,10 +7,13 @@ from .models import CarModel
 # CarModelInline class
 class CarModelInline(admin.TabularInline):
     model = CarModel
+
+
 # CarModelAdmin class
 class CarModelAdmin(admin.ModelAdmin):
-    list_display=['CarModel', 'CarMake']
+    list_display = ['CarModel', 'CarMake']
 # CarMakeAdmin class with CarModelInline
+
 
 # Register models here
 admin.site.register(CarModel)
