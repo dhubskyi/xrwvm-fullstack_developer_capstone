@@ -5,6 +5,7 @@
 from django.contrib.auth.models import User
 # from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import logout
+from requests import ConnectionError
 # from django.contrib import messages
 # from datetime import datetime
 
@@ -110,10 +111,10 @@ def add_review(request):
     if (request.user.is_anonymous is False):
         data = json.loads(request.body)
         try:
-            post_review(data)  
+            post_review(data)
             # there used to be "response = post_review(data)"
             return JsonResponse({"status": 200})
-        except:
+        except ConnectionError:
             return JsonResponse(
                 {"status": 401,
                  "message": "Error in posting review"})
