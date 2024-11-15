@@ -33,7 +33,8 @@ ALLOWED_HOSTS = [
     "hubskyydenys-8000.theiadockernext-1-" +
     "labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
     "0.0.0.0"]
-CSRF_TRUSTED_ORIGINS = ["https://localhost",
+CSRF_TRUSTED_ORIGINS = [
+    "https://localhost",
     "hubskyydenys-8000.theiadockernext-1-" +
     "labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
     "0.0.0.0",
@@ -103,7 +104,8 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'django.contrib.auth.password_validation.' +
+        'UserAttributeSimilarityValidator',
     },
     {
         'NAME':
@@ -140,10 +142,6 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
-
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
