@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
                     ('WAGON', 'Wagon')], default='SUV',
                     max_length=15)),
                 ('year', models.IntegerField(default=2024,
-                    validators=[
+                 validators=[
                         django.core.validators.MaxValueValidator(2024),
                         django.core.validators.MinValueValidator(2015)])),
                 ('car_make', models.ForeignKey(
