@@ -82,19 +82,21 @@ def registration(request):
     # If it is a new user
     if not username_exist:
         # Create user in auth_user table
-        user = User.objects.create_user(username=username,
+        user = User.objects.create_user(
+            username=username,
             first_name=first_name,
             last_name=last_name, password=password, email=email)
         # Login the user and redirect to list page
         login(request, user)
         data = {"userName": username, "status": "Authenticated"}
         return JsonResponse(data)
-    else :
+    else:
         data = {"userName": username, "error": "Already Registered"}
         return JsonResponse(data)
 
 
-# Update the `get_dealerships` render list of dealerships all by default, particular state if state is passed
+# Update the `get_dealerships` render list of
+# dealerships all by default, particular state if state is passed
 def get_dealerships(request, state="All"):
     if (state == "All"):
         endpoint = "/fetchDealers"
@@ -108,7 +110,8 @@ def add_review(request):
     if (request.user.is_anonymous is False):
         data = json.loads(request.body)
         try:
-            post_review(data)  # there used to be "response = post_review(data)"
+            post_review(data)  
+            # there used to be "response = post_review(data)"
             return JsonResponse({"status": 200})
         except:
             return JsonResponse(
